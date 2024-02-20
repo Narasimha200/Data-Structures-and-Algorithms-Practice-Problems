@@ -1,7 +1,7 @@
-
-
 // url:- "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"
 //  level:- "Medium"
+// bruteforce:- try for every node in the tree to every node in the tree solved in n*log(n) time complexity
+//and optimal code is writern below
 #include <iostream>
 #include <vector>
 using namespace std;
