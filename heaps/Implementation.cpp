@@ -27,6 +27,31 @@ class heap{
             index = parent;
         } 
     }
+    void heapify(int *arr, int size, int i){
+        int largest = i;
+        int left = 2 * i;
+        int right = 2 * i + 1;
+        if(left <= size && arr[largest] < arr[left]){
+            largest = left;
+        }
+        if(right <= size && arr[largest] < arr[right]){
+            largest = right;
+        }
+        if(largest != i){
+            swap(arr[i],arr[largest]);
+            heapify(arr, size, largest);
+        }
+    }
+
+    void deleteNode(){
+        if(size == 0){
+            cout << "Not enough elements to delete" << endl;
+            return;
+        }
+        arr[1] = arr[size];
+        --size;
+        heapify(arr, size, 1);
+    }
     void print(){
         for(int i = 1; i <= size; i++){
             cout << arr[i] <<" ";
@@ -42,6 +67,8 @@ int main(){
     h.insert(53);
     h.insert(52);
     h.insert(54);
+    h.print();
+    h.deleteNode();
     h.print();
     return 0;
 }
