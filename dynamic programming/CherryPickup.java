@@ -1,7 +1,5 @@
 //problem link:- "https://leetcode.com/problems/cherry-pickup-ii/"
 
-import java.util.*;
-
 class Solution {
     // memoiztion
     int maxScore(int i, int j1, int j2, int row, int col, int[][] grid, int[][][] dp) {
